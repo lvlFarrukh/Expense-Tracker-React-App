@@ -84,11 +84,15 @@ body {
   width: 30px;
   height: 36px;
   position: relative;
-  right: 14px;
-  bottom: 0px;
-  visibility: hidden;
-  /* display: none; */
-  /* bottom: 0.5px; */
+  right: 5px;
+  bottom: 2px;
+  /* visibility: hidden; */
+  background-color: grey;
+  display: hidden;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .plus {
@@ -146,4 +150,9 @@ body {
 
 #Addtrans > form > button:hover {
   box-shadow: 0 0 4px 0px black;
+}
+
+.am-div {
+  float: right;
+  margin: 6px;
 }

@@ -8,15 +8,21 @@ import { Expenses } from './components/Expenses';
 import { TransectionHistory } from './components/TransectionHistory';
 import { AddTransection } from './components/AddTransection';
 
+import { GlobalProvider } from './context/GlobalState'
+
 function App() {
+  // const transtion = useContext(GlobalState)
+
   return (
-    <div className="main-div">
-      <Header />
-      <Currentbalance />
-      <Expenses />
-      <TransectionHistory />
-      <AddTransection />
-    </div>
+    <GlobalProvider>
+      <div className="main-div">
+        <Header />
+        <Currentbalance />
+        <Expenses />
+        <TransectionHistory />
+        <AddTransection />
+      </div>
+    </GlobalProvider>
   );
 }
 

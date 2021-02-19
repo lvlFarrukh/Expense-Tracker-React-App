@@ -3,9 +3,8 @@ import React, { createContext, useReducer } from 'react';
 
  const initialState = {
     transaction: [
-        {id: 1, text: 'books', amount: -100},
-        {id: 2, text: 'rent', amount: 1000},
-    ]
+    ],
+    totalTransaction: 1,
  }
 
  export const GlobalState = createContext(initialState)
@@ -19,10 +18,20 @@ import React, { createContext, useReducer } from 'react';
             payload: id
         })
     }
+
+    let addTransaction = (transaction) =>{
+        transaction['id'] = initialState.totalTransaction;
+        initialState.totalTransaction = initialState.totalTransaction + 1
+        dispatch({
+            type: 'ADD_TRANSACTION',
+            payload: transaction
+        })
+    }
      return (
         <GlobalState.Provider value={{
             transaction: state.transaction,
             deleteTransaction,
+            addTransaction,
         }} >
             {children}
         </GlobalState.Provider>

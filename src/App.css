@@ -136,11 +136,14 @@ body {
 #Addtrans > form > div > input ,#Addtrans > form > button  {
   background-color: #80808070;
   width: 100% !important;
-  height: 28px;
+  height: 35px;
   margin: 10px 0px;
   outline: none;
   border: none;
   font-size: 18px;
+  border-radius: 2px;
+  text-indent: 10px;
+
 }
 
 #Addtrans > form > button {
